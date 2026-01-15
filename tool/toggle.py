@@ -13,7 +13,7 @@ import pyautogui as g
 from tkinter import messagebox
 
 def count_in(path: str) -> bool:
-	config = path+"/config.csv"
+	config = os.path.join(path, "config.csv")
 	if not os.path.isfile(config):
 		return False
 	with open(config, "r") as c:
@@ -39,7 +39,7 @@ try:
 	if not screen_size == (1920,1080):
 		raise SystemError("Unsupported resolution. You can only use this tool on 1920x1080 screen.")
 
-	__path__ = os.path.dirname(__file__)
+	__path__ = os.path.dirname(sys.executable)
 	if not count_in(__path__):
 		raise ValueError("Cannot configure count-in. Fix or reset your config.csv file (see installation folder).")
 
