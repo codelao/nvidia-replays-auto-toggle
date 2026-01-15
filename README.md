@@ -2,7 +2,7 @@
  <img src="https://i.imgur.com/JxyvX2z.png" width="2%"> NVIDIA replays auto-enable
 </h1>
 <p align="center">
- If you're annoyed by the automatic disabling of «Instant Replay» feature in NVIDIA App - this tool is for you. I personally lost so many highlights just because my replays were turned off and I didn't check it. Seems like currently there are no easy ways to fix it, so I made this tool that turns replays back on at the system startup.
+ If you're annoyed by the automatic disabling of «Instant Replay» feature in NVIDIA App - this tool is for you. I personally lost so many highlights just because my replays were turned off and I didn't check it. Seems like currently there are no easy ways to fix it without disabling desktop capture, so I made this tool that turns replays back on upon system startup.
 </p>
 
 ### [Project's wiki](https://github.com/codelao/nvidia-replays-auto-enable/wiki)
