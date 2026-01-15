@@ -21,7 +21,7 @@ WizardStyle=modern
 DisableWelcomePage=no
 LicenseFile=LICENSE.txt
 WizardImageFile=qr.bmp
-WizardSmallImageFile=wizard-icon.bmp
+WizardSmallImageFile=wizard-small.bmp
 
 #include "customization.iss"
 
