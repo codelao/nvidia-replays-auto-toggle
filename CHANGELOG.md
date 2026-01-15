@@ -1,3 +1,9 @@
+# 1.0.1-beta
+*1/15/2026*
+
+- Config error fix
+- Wizard image fix
+
 # 1.0.0-beta
 *1/14/2026*
 
