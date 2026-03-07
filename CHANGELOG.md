@@ -1,3 +1,8 @@
+# 1.0.2-beta
+*3/7/2026*
+
+- Shrinked overlay error fix
+
 # 1.0.1-beta
 *1/15/2026*
 

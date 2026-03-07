@@ -47,21 +47,26 @@ try:
 	g.hotkey("alt","z")
 	time.sleep(1)
 
+	overlayType = 1
 	# make sure overlay is opened
 	try:
-		g.locateOnScreen("overlay-marker.png", confidence=0.8)
+		g.locateOnScreen("overlay marker.png", confidence=0.8)
 	except g.ImageNotFoundException:
-		raise SystemError("NVIDIA App is either not installed or not running yet. Also, make sure that your overlay's hotkey is set to Alt+Z, otherwise, you will not be able to use this tool.")
+		try:
+			g.locateOnScreen("shrinked overlay marker.png", confidence=0.8)
+			overlayType = 2
+		except g.ImageNotFoundException:
+			raise SystemError("NVIDIA App is either not installed or not running yet. Also, make sure that your overlay's hotkey is set to Alt+Z, otherwise, you will not be able to use this tool.")
 	
 	# locate replays section
-	x, y = (240,350)
+	x, y = (240,350) if overlayType==1 else (240,210)
 	g.moveTo(x,y)
 	g.click()
 
 	time.sleep(1)
 
 	# locate toggle switch
-	x, y = (486,98)
+	x, y = (486,98) if overlayType==1 else (360,72)
 	if not g.pixelMatchesColor(x,y,(118,185,0),tolerance=20):
 		g.moveTo(x,y,2)
 		g.click()
